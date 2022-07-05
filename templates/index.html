@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication system</title>
+</head>
+<body>
+    <h1>Authentication app</h1>
+
+    {% if user.is_authenticated %}
+    
+    <p> Welcome to the Authentication system <strong>{{user.first_name}}</strong></p>
+    <button name="signout"><a href="signout">Sign Out</a></button>
+
+    {% else %}
+
+    <button name="signup"><a href="signup">Sign Up</a></button>
+    <button name="signin"><a href="signin">Sign In</a></button>
+    
+    {% endif %}
+    
+</body>
+</html>
